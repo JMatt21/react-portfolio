@@ -1,32 +1,82 @@
-.App {
+html, body {
+  width: 100%;
+  height: 100%;
+}
+body {
+  background-color: rgba(52, 46, 55, 0.301);
+  color: #FFFFFB;
   text-align: center;
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+  /* font-weight: bold; */
+  font-family: 'Oswald', sans-serif;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
+h2 {
+  font-size: 60px;
+  line-height: 90px;
+}
+.skills {
+  margin: 7.5vh auto 0;
+  width: 60%;
+  min-width: 300px;
+}
+.skillContainer {
+  /* height: 250px; */
+  min-width: 200px;
+  width: 45%;
+  max-width: 300px;
+  border: 6px #342E37 solid;
+  background-color: #3a8a89;
+  z-index: 2;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.floatR{
+  float: right;
+}
+.floatL{
+  float: left;
 }
 
-.App-link {
-  color: #61dafb;
+.skillContainer li {
+  position: relative;
+  list-style: none;
+  text-align: left;
+  margin-left: 1em;
+  font-size: 30px;
+  line-height: 45px;
+}
+.skillContainer li::before {
+  content: '';
+  position: absolute;
+  width: .65em;
+  height: .65em;
+  left: -.8em;
+  top: .5em;
+  background: url("./assets/icons/greencheck.png");
+  background-size: cover;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.clearfix::after {
+  content: '';
+  clear: both;
+  display: table;
+}
+
+@media screen and (max-width: 768px){
+  h2{
+    font-size: 40px;
+    line-height: 60px;
   }
-  to {
-    transform: rotate(360deg);
+  .skills {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 461px){
+  .skillContainer{
+    float: initial;
+    margin:0 auto 1vh;
+    width: 100%;
   }
 }

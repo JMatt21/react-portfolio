@@ -1,0 +1,31 @@
+.tooltip[data-tool-tip] {
+    display: inline;
+    position: relative;
+    text-decoration: underline;
+    color: rgb(95, 104, 145);
+    cursor: default;
+    text-align: center;
+  }
+  
+.tooltip[data-tool-tip]::after {
+    content: attr(data-tool-tip);
+    position: absolute;
+    display: inline;
+    background: #FFFFFB;
+    border-radius: 5px;
+    font-size: .75em;
+    color: initial;
+    padding: .3em 1em;
+    bottom: 0;
+    left: -100%;
+    transform: scale(0);
+    text-align: center;
+    transition: 
+      transform ease-in-out 200ms,
+      bottom 200ms;
+  }
+  
+.tooltip[data-tool-tip]:hover::after {
+    bottom: 100%;
+    transform: scale(1);
+  }

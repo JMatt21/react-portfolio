@@ -1,0 +1,91 @@
+a {
+    /* text-decoration: none; */
+    color: inherit;
+}
+
+.title h2{
+    display: inline;
+    position: relative;
+    margin: 0 auto;
+    /* width: 100%; */
+}
+
+.text-boxes {
+    margin: 0 auto;
+    width: 90%;
+    /* border: red 2px solid; */
+    font-size: 25px;
+    line-height: 37px;
+}
+  
+.description {
+    word-wrap: break-word;
+    text-align: initial;
+    float: left;
+    width: 75%;
+}
+
+.description p {
+    font-size: 30px;
+    line-height: 45px;
+}
+  
+.tech-used {
+    float: left;
+    width: 25%
+}
+.tech-used p {
+    width: 100%;
+    position: relative;
+    margin: 0 auto .5em;
+    /* text-decoration: underline; */
+}
+.tech-used p::before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 5px;
+    background-color: #FFFFFB;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 1.4em;
+}
+.tech-used li {
+    /* text-align: initial; */
+    list-style: none;
+    position: relative;
+}
+.tech-used li::before {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #FFFFFB;
+    border-radius: 50%;
+    left: 1.5em;
+    top: .5em;
+}
+.line-break {
+    margin-top: .5em;
+}
+
+img {
+    width: 70%;
+    height: 60vh;
+}
+
+@media screen and (max-width: 768px){
+    img{
+        width: 100%;
+        height: 30vh;
+    }
+    .text-boxes{
+        width: 100%;
+        font-size: 20px;
+        line-height: 30px;
+    }
+    .description p{
+        font-size: 25px;
+        line-height: 37.5px;
+    }
+}

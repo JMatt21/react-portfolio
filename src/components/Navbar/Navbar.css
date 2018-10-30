@@ -1,0 +1,119 @@
+nav {
+    height: 60px;
+    width: 100%;
+    background: #342E37;
+    display: block;
+    z-index: 1000;
+    /* border-bottom: 15px #555da2 ridge; */
+}
+nav::before, nav::after 
+{
+    width: 50%;
+    position: absolute;
+    content: '';
+    height: inherit;
+    z-index: 1;
+}
+nav::before {
+    left: 50%;
+    border-bottom: 15px #555da2 groove;
+}
+nav::after {
+    right: 50%;
+    border-bottom: 15px #555da2 ridge;
+}
+
+.nav__icon {
+    display: block;
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    top: 10px;
+    right: 50%;
+    transform: translateX(50%);
+    z-index: 2;
+    background-color: #342E37;
+    border: 15px #555da2 ridge;
+    border-radius: 50%;
+}
+
+nav ul {
+    width: 205px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+nav ul.right {
+    float: right;
+    margin: 0 auto;
+}
+nav ul.left {
+    float:left;
+    margin: 0 auto;
+}
+nav li {
+    display: inline-block;
+    position: relative;
+    padding-top: 18px;
+}
+
+nav ul.left li {
+    margin-left: 2rem;
+}
+
+nav ul.right li {
+    margin-right: 2rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: #D7D9CE;
+    position: relative;
+    z-index: 25;
+}
+
+nav a::before {
+    content: '';
+    display: block;
+    position: absolute;
+    height: 5px;
+    width: 0;
+    bottom: 25px;
+    background: #555da2;
+    transition: all ease-in-out 300ms;
+}
+
+nav a:hover::before {
+    width: 100%;
+}
+
+@media screen and (max-width: 540px){
+    /* nav ul.left li {
+        margin-left: .02em;
+    }
+    nav ul.right li {
+        margin-right: .02em;
+    } */
+    nav {
+        height: 120px;
+    }
+    .nav__icon {
+        top: 70px;
+    }
+    nav a {
+        font-size: 18px;
+    }
+    nav ul {
+        width: 50%;
+    }
+    nav ul li {
+        padding-top: 20px;
+    }
+    nav ul.left li {
+        margin-left: 15%;
+    }
+    
+    nav ul.right li {
+        margin-right: 15%;
+    }
+}
