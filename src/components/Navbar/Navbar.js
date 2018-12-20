@@ -8,7 +8,7 @@ export default () => {
     return (
         <nav>
             <ul className="left">
-                <li><ALink href="#">Source</ALink></li>
+                <li><ALink href="https://github.com/JMatt21/react-portfolio">Source</ALink></li>
                 <li><ALink href={Resume}>Resume</ALink></li>
             </ul>
             <img src={MyImage} alt="Matthew Bertrandt" className="nav__icon" />
